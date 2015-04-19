@@ -5,7 +5,7 @@
 function countBs(string) {
   var count = 0;
   for (var number = 0; number < (string.length); number++) {
-    if (string.charAt(number)=="B")
+    if (string.charAt(number)==="B")
       count++;
   }
   console.log(count);
@@ -21,7 +21,7 @@ function countBs(string) {
 function countChar(string, char) {
   var count = 0;
   for (var number = 0; number < string.length; number++) {
-    if (string.charAt(number)==char)
+    if (string.charAt(number)===char)
       count++;
   }
   console.log(count);
