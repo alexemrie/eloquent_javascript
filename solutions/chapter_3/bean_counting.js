@@ -4,7 +4,7 @@
 
 function countBs(string) {
   var count = 0;
-  for (var number = 0; number < (string.length); number++) {
+  for (var number = 0; number < string.length ; number++) {
     if (string.charAt(number)==="B")
       count++;
   };
