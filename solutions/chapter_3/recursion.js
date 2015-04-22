@@ -12,7 +12,7 @@ function isEven(number) {
     console.log("Odd");
   else
     return isEven((number - 2));
-}
+};
 
 console.log(isEven(50));
 console.log(isEven(75));

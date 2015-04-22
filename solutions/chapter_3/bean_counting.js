@@ -7,9 +7,11 @@ function countBs(string) {
   for (var number = 0; number < (string.length); number++) {
     if (string.charAt(number)==="B")
       count++;
-  }
-  console.log(count);
-}
+  };
+  return count;
+};
+
+// console.log(countBs("Banana Boat"));
 
 
 // Write a fuction called countChar that behaves like countBs,
@@ -23,6 +25,8 @@ function countChar(string, char) {
   for (var number = 0; number < string.length; number++) {
     if (string.charAt(number)===char)
       count++;
-  }
-  console.log(count);
-}
+  };
+  return count;
+};
+
+// console.log(countChar("Banana Boat", "a"));

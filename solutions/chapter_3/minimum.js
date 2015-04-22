@@ -5,7 +5,7 @@ function min(x,y) {
     console.log(x);
   else
     console.log(y);
-}
+};
 
 console.log(min(-10, 25));
 

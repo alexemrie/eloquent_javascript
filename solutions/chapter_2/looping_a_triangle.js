@@ -20,3 +20,31 @@ while (output.length < 7) {
 
 // for (var triangle= "#"; triangle.length < 8; triangle += "#")
 //   console.log(triangle);
+
+
+
+
+// ...........................................
+
+
+// Class Review
+
+// for (var i = 0; i <= 8; ++i) {
+//   var string = "########";
+//   console.log(string.slice(0,i));
+// };
+
+// i++ adds i before the increment
+// ++i adds i after the increment
+
+// ................................................
+
+
+// var string = "########", result = "";
+//
+// for (var i = 0; i <= 8; ++i) {
+//   result += string.slice(0,i) + "\n";
+// };
+
+// console.log(result);
+// console.log(result.trim());

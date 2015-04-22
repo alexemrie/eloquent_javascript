@@ -6,9 +6,9 @@ function reverseArray(array) {
   var newArray = [];
   for (i=(array.length - 1); i >= 0; i--) {
     newArray.push(array[i]);
-  }
+  };
   console.log(newArray);
-}
+};
 
 console.log(reverseArray([1,2,3,4,5]));
 
@@ -29,11 +29,23 @@ function reverseArrayInPlace(array) {
     array[b] = x;
     a++;
     b--;
-  }
+  };
   console.log(array);
-}
+};
 
-// for loop
+// for loop 0 < b (use this one)
+function reverseArrayInPlace(array) {
+  var b = (array.length - 1);
+  for (var a = 0; b > 0; a++) {
+    var x = array[a];
+    array[a] = array[b];
+    array[b] = x;
+    b--;
+  };
+  console.log(array);
+};
+
+// another for loop a < b
 function reverseArrayInPlace(array) {
   var b = (array.length - 1);
   for (var a = 0; a < b; a++) {
@@ -41,8 +53,8 @@ function reverseArrayInPlace(array) {
     array[a] = array[b];
     array[b] = x;
     b--;
-  }
+  };
   console.log(array);
-}
+};
 
 console.log(reverseArrayInPlace([1,2,3,4]));
