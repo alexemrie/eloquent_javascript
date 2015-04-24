@@ -18,6 +18,7 @@ var arrayToList = function(array) {
   };
   return list;
 };
+
 // console.log(arrayToList([1,2,3,4]));
 
 // Write a listToArray function that produces an array from a list
@@ -61,3 +62,34 @@ var nth = function(list, index) {
 
 console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
+
+
+var list = {
+  data: "a",
+  rest: {
+    data: "b",
+    rest: {
+      data: "c",
+      rest: null
+    }
+  }
+};
+
+
+var input = ["a", "b", "c"];
+var node = null;
+
+node = {
+  data: a[2],
+  rest: null
+};
+
+node = {
+  data: a[1],
+  rest: grandchild
+}
+
+node = {
+  data: "a",
+  rest: parent
+}
