@@ -1,19 +1,8 @@
-// html <script src="http://eloquentjavascript.net/code/ancestry.js"></script>
+var ancestry = JSON.parse(require('./ancestry.js'));
 
-
-// console.log(ANCESTRY_FILE);
-
-ancestry = JSON.parse(ANCESTRY_FILE);
-
-console.log(ancestry);
-
-// function average(array) {
-//   function plus(a, b) { return a + b; }
-//   return array.reduce(plus) / array.length;
-// }
-
-// Using the example data set from this chapter, compute the average age difference between mothers and children (the age of the mother when the child is born). You can use the average function defined earlier in this chapter.
-
+// Using the example data set from this chapter, compute the average age difference between mothers and children
+// (the age of the mother when the child is born). You can use the average function defined earlier in this chapter.
+// 31.222
 
 function average(array) {
   function plus(a, b) { return a + b; }
@@ -21,12 +10,38 @@ function average(array) {
 }
 
 var peopleWithMothers = ancestry.filter(function(person) {
-  if (person.mother != null) {
+  if (person.mother !== null && person.birth !== null) {
     return person;
   }
 });
 
-console.log(peopleWithMothers);
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+
+
+var birthAge = function(object) {
+  results = [];
+  object.forEach(function(person) {
+    if (byName[person.mother]) {
+    results.push(person.born - byName[person.mother]["born"]);
+    }
+    // results.push(person.born);
+  });
+  return results;
+};
+
+
+
+console.log(average(birthAge(peopleWithMothers)));
+
+
+
+
+
+
+// console.log(peopleWithMothers);
 
 // Mother_name; child_name; born
 // Child born - Mother born = mother age when born
